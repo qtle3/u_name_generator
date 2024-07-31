@@ -1,6 +1,7 @@
 # This program generates username from specified first name and last name
 import random
 
+# set to store usernames
 usernames = set()
 
 
