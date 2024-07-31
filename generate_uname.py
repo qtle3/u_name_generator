@@ -1,6 +1,8 @@
 # This program generates username from specified first name and last name
 import random
 
+usernames = set()
+
 
 def generate_uname():
     # get user’s first and last names
@@ -14,6 +16,14 @@ def generate_uname():
     # concatenate first initial with 7 chars of last name
     uname = first[0] + last[:7] + num
     print("uname =", uname)
+
+    # check if username is already in use
+    if uname not in usernames:
+        usernames.add(uname)
+        print("Username is available")
+    else:
+        print("Username is not available")
+        generate_uname()
 
 
 generate_uname()
