@@ -20,6 +20,7 @@ def generate_uname():
 
     # check if username is already in use
     if uname not in usernames:
+        # add username to set
         usernames.add(uname)
         print("Username is available")
     else:
